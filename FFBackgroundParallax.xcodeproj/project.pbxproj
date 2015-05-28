@@ -14,6 +14,7 @@
 		DC8E5E7B1B176B1D00C0C136 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC8E5E7A1B176B1D00C0C136 /* Images.xcassets */; };
 		DC8E5E7E1B176B1D00C0C136 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC8E5E7C1B176B1D00C0C136 /* LaunchScreen.xib */; };
 		DC8E5E8A1B176B1D00C0C136 /* FFBackgroundParallaxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8E5E891B176B1D00C0C136 /* FFBackgroundParallaxTests.m */; };
+		DC8E5E951B176D4D00C0C136 /* FFBackgroundParallax.m in Sources */ = {isa = PBXBuildFile; fileRef = DC8E5E941B176D4D00C0C136 /* FFBackgroundParallax.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		DC8E5E831B176B1D00C0C136 /* FFBackgroundParallaxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FFBackgroundParallaxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC8E5E881B176B1D00C0C136 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DC8E5E891B176B1D00C0C136 /* FFBackgroundParallaxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFBackgroundParallaxTests.m; sourceTree = "<group>"; };
+		DC8E5E931B176D4D00C0C136 /* FFBackgroundParallax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFBackgroundParallax.h; sourceTree = "<group>"; };
+		DC8E5E941B176D4D00C0C136 /* FFBackgroundParallax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFBackgroundParallax.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 			children = (
 				DC8E5E711B176B1D00C0C136 /* AppDelegate.h */,
 				DC8E5E721B176B1D00C0C136 /* AppDelegate.m */,
+				DC8E5E931B176D4D00C0C136 /* FFBackgroundParallax.h */,
+				DC8E5E941B176D4D00C0C136 /* FFBackgroundParallax.m */,
 				DC8E5E741B176B1D00C0C136 /* ViewController.h */,
 				DC8E5E751B176B1D00C0C136 /* ViewController.m */,
 				DC8E5E771B176B1D00C0C136 /* Main.storyboard */,
@@ -221,6 +226,7 @@
 			files = (
 				DC8E5E761B176B1D00C0C136 /* ViewController.m in Sources */,
 				DC8E5E731B176B1D00C0C136 /* AppDelegate.m in Sources */,
+				DC8E5E951B176D4D00C0C136 /* FFBackgroundParallax.m in Sources */,
 				DC8E5E701B176B1D00C0C136 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,6 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FFBackgroundParallax/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +365,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = FFBackgroundParallax/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
