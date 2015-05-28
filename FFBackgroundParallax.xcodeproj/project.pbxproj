@@ -43,6 +43,7 @@
 		DC8E5E891B176B1D00C0C136 /* FFBackgroundParallaxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FFBackgroundParallaxTests.m; sourceTree = "<group>"; };
 		DC8E5E931B176D4D00C0C136 /* FFBackgroundParallax.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFBackgroundParallax.h; sourceTree = "<group>"; };
 		DC8E5E941B176D4D00C0C136 /* FFBackgroundParallax.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFBackgroundParallax.m; sourceTree = "<group>"; };
+		DCC5D9071B17D84400A8040A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 		DC8E5E611B176B1D00C0C136 = {
 			isa = PBXGroup;
 			children = (
+				DCC5D9071B17D84400A8040A /* README.md */,
 				DC8E5E6C1B176B1D00C0C136 /* FFBackgroundParallax */,
 				DC8E5E861B176B1D00C0C136 /* FFBackgroundParallaxTests */,
 				DC8E5E6B1B176B1D00C0C136 /* Products */,
@@ -424,6 +426,7 @@
 				DC8E5E8F1B176B1D00C0C136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC8E5E901B176B1D00C0C136 /* Build configuration list for PBXNativeTarget "FFBackgroundParallaxTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +435,7 @@
 				DC8E5E921B176B1D00C0C136 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

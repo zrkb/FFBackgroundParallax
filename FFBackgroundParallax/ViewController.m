@@ -26,8 +26,10 @@
 
 - (void)configureBackgroundParallax {
 	
+	// Instantiate the View
 	FFBackgroundParallax *backgroundParallax = [[FFBackgroundParallax alloc] initWithFrame:self.view.bounds];
 	
+	// Here you can set your Image Background for Parallax Scrolling
 	[backgroundParallax setImageBackground:[UIImage imageNamed:@"mountains.jpg"]];
 	
 	for (NSUInteger i = 0; i < kTotalItems; i++) {
@@ -40,6 +42,7 @@
 		[backgroundParallax.contentScrollView addSubview:badge];
 	}
 	
+	// Update `setContentSize` property of your `contentScrollView`
 	[backgroundParallax.contentScrollView setContentSize:CGSizeMake(CGRectGetWidth(backgroundParallax.frame) * kTotalItems, CGRectGetHeight(backgroundParallax.frame))];
 	
 	[self.view addSubview:backgroundParallax];
