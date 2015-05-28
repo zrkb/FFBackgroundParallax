@@ -67,6 +67,7 @@ To add your background image, simply call:
 ## Credits
 
 * Minimal Design Badges - [https://dribbble.com/shots/1898692-Minimal-Design-Badges](https://dribbble.com/shots/1898692-Minimal-Design-Badges)
+* Snowy Mountain Peaks Photo by Lee Roylland - [https://unsplash.com/roylandnye](https://unsplash.com/roylandnye)
 
 ## Collaboration
 
