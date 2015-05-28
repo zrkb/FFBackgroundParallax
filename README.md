@@ -5,7 +5,7 @@ FFBackgroundParallax
 [![Plaform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)](https://github.com/rockbarato/FFBackgroundParallax)
 [![Version](https://img.shields.io/badge/Version-1.1.0-ff69b4.svg)](https://github.com/rockbarato/FFBackgroundParallax)
 
-Background Parallax is a simple example for parallax scrolling based on several UIScrollViews. The library is a UIView subclass that has two UIScrollView, one for content and the second for the background image.
+Background Parallax is a simple example for parallax scrolling based on several UIScrollViews. This library is simply a UIView subclass with two UIScrollView, one for content and the second for the background image.
 
 ![Preview](https://s3.amazonaws.com/f.cl.ly/items/2t3f2v1L0R1K3K0m012K/BackgroundParallax.gif)
 
@@ -17,7 +17,7 @@ First you need to import the header file
 #import "FFBackgroundParallax.h"
 ```
 
-Then define your Total Items and your Item Image Size`
+Then define your Total Items and your Item Image Size
 
 ```objc
 #define kImageSize 250.0
@@ -63,6 +63,10 @@ To add your background image, simply call:
 ```objc
 - (void)setImageBackground:(UIImage *)image
 ```
+
+## Credits
+
+* Minimal Design Badges - [https://dribbble.com/shots/1898692-Minimal-Design-Badges](https://dribbble.com/shots/1898692-Minimal-Design-Badges)
 
 ## Collaboration
 
