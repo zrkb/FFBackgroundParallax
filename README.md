@@ -65,6 +65,10 @@ To add your background image, simply call:
 - (void)setImageBackground:(UIImage *)image
 ```
 
+## Todo
+
+* Vertical Compatibility
+
 ## Credits
 
 * Minimal Design Badges - [https://dribbble.com/shots/1898692-Minimal-Design-Badges](https://dribbble.com/shots/1898692-Minimal-Design-Badges)
