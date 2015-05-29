@@ -4,6 +4,7 @@ FFBackgroundParallax
 [![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
 [![Plaform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)](https://github.com/rockbarato/FFBackgroundParallax)
 [![Version](https://img.shields.io/badge/Version-1.1.0-ff69b4.svg)](https://github.com/rockbarato/FFBackgroundParallax)
+[![Build](https://img.shields.io/badge/Build-46-brightgreen.svg)](https://github.com/rockbarato/FFBackgroundParallax)
 
 Background Parallax is a simple example for parallax scrolling based on several UIScrollViews. This library is simply a UIView subclass with two UIScrollView, one for content and the second for the background image.
 
