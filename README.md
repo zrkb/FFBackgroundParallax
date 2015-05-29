@@ -68,6 +68,7 @@ To add your background image, simply call:
 ## Todo
 
 * Vertical Compatibility
+* Swift Demo
 
 ## Credits
 
