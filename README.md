@@ -1,14 +1,28 @@
 FFBackgroundParallax
 ====================
-[![Join the chat at https://gitter.im/rockbarato/FFBackgroundParallax](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/rockbarato/FFBackgroundParallax?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![License](http://img.shields.io/badge/License-MIT-blue.svg)](http://opensource.org/licenses/MIT)
-[![Plaform](https://img.shields.io/badge/Platform-iOS-lightgrey.svg)](https://github.com/rockbarato/FFBackgroundParallax)
-[![Version](https://img.shields.io/badge/Version-1.1.0-ff69b4.svg)](https://github.com/rockbarato/FFBackgroundParallax)
-[![Build](https://img.shields.io/badge/Build-46-brightgreen.svg)](https://github.com/rockbarato/FFBackgroundParallax)
+[![License](https://img.shields.io/github/license/rockbarato/FFBackgroundParallax.svg)](http://opensource.org/licenses/MIT)
+[![CocoaPods Platform](https://img.shields.io/cocoapods/p/FFBackgroundParallax.svg)](https://github.com/rockbarato/FFBackgroundParallax)
+[![Language](https://img.shields.io/badge/language-Objective--C-green.svg)](https://github.com/rockbarato/FFBackgroundParallax)
+[![CocoaPods Tag](https://img.shields.io/cocoapods/v/FFBackgroundParallax.svg)](https://github.com/rockbarato/FFBackgroundParallax)
 
-Background Parallax is a simple example for parallax scrolling based on several UIScrollViews. This library is simply a UIView subclass with two UIScrollView, one for content and the second for the background image.
+Background Parallax Scrolling is a simple example for parallax scrolling based on several UIScrollViews. This library is simply a UIView subclass with two UIScrollView, one for content and the second for the background image.
 
 ![Preview](https://s3.amazonaws.com/f.cl.ly/items/2t3f2v1L0R1K3K0m012K/BackgroundParallax.gif)
+
+
+## Installation
+
+> Instead of adding the source files directly to your project, you may want to consider using [CocoaPods](http://cocoapods.org/) to manage your dependencies. Follow the instructions on the CocoaPods site to install the gem, and specify `FFBackgroundParallax` as a dependency in your `Podfile` with:
+
+```ruby
+pod ‘FFBackgroundParallax', '~> 1.0.0'
+```
+But if you want to do it the old fashioned way, just add `FFBackgroundParallax.h/m` files to your project.
+
+## Requirements
+
+* ARC
+* iOS 6.0 and above
 
 ## Usage
 
