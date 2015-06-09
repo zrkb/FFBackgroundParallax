@@ -15,7 +15,7 @@ Background Parallax Scrolling is a simple example for parallax scrolling based o
 > Instead of adding the source files directly to your project, you may want to consider using [CocoaPods](http://cocoapods.org/) to manage your dependencies. Follow the instructions on the CocoaPods site to install the gem, and specify `FFBackgroundParallax` as a dependency in your `Podfile` with:
 
 ```ruby
-pod ‘FFBackgroundParallax', '~> 1.0.0'
+pod 'FFBackgroundParallax', '~> 1.0.0'
 ```
 But if you want to do it the old fashioned way, just add `FFBackgroundParallax.h/m` files to your project.
 
