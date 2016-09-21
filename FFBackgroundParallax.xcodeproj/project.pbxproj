@@ -64,6 +64,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DC8E50C91D92BFDD000B8584 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				DC8E5E711B176B1D00C0C136 /* AppDelegate.h */,
+				DC8E5E721B176B1D00C0C136 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		DC8E50CA1D92BFEF000B8584 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DC8E5E771B176B1D00C0C136 /* Main.storyboard */,
+				DC8E5E7A1B176B1D00C0C136 /* Images.xcassets */,
+				DC8E5E7C1B176B1D00C0C136 /* LaunchScreen.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		DC8E50CB1D92BFF8000B8584 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DC8E5E741B176B1D00C0C136 /* ViewController.h */,
+				DC8E5E751B176B1D00C0C136 /* ViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		DC8E50CC1D92C004000B8584 /* FFBackgroundParallax */ = {
+			isa = PBXGroup;
+			children = (
+				DC8E5E931B176D4D00C0C136 /* FFBackgroundParallax.h */,
+				DC8E5E941B176D4D00C0C136 /* FFBackgroundParallax.m */,
+			);
+			name = FFBackgroundParallax;
+			sourceTree = "<group>";
+		};
 		DC8E5E611B176B1D00C0C136 = {
 			isa = PBXGroup;
 			children = (
@@ -86,15 +123,10 @@
 		DC8E5E6C1B176B1D00C0C136 /* FFBackgroundParallax */ = {
 			isa = PBXGroup;
 			children = (
-				DC8E5E711B176B1D00C0C136 /* AppDelegate.h */,
-				DC8E5E721B176B1D00C0C136 /* AppDelegate.m */,
-				DC8E5E931B176D4D00C0C136 /* FFBackgroundParallax.h */,
-				DC8E5E941B176D4D00C0C136 /* FFBackgroundParallax.m */,
-				DC8E5E741B176B1D00C0C136 /* ViewController.h */,
-				DC8E5E751B176B1D00C0C136 /* ViewController.m */,
-				DC8E5E771B176B1D00C0C136 /* Main.storyboard */,
-				DC8E5E7A1B176B1D00C0C136 /* Images.xcassets */,
-				DC8E5E7C1B176B1D00C0C136 /* LaunchScreen.xib */,
+				DC8E50CC1D92C004000B8584 /* FFBackgroundParallax */,
+				DC8E50CB1D92BFF8000B8584 /* Controllers */,
+				DC8E50CA1D92BFEF000B8584 /* Resources */,
+				DC8E50C91D92BFDD000B8584 /* AppDelegate */,
 				DC8E5E6D1B176B1D00C0C136 /* Supporting Files */,
 			);
 			path = FFBackgroundParallax;
@@ -171,14 +203,16 @@
 		DC8E5E621B176B1D00C0C136 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Pandorga;
 				TargetAttributes = {
 					DC8E5E691B176B1D00C0C136 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = TZC6423TE8;
 					};
 					DC8E5E821B176B1D00C0C136 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = TZC6423TE8;
 						TestTargetID = DC8E5E691B176B1D00C0C136;
 					};
 				};
@@ -301,14 +335,17 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -344,8 +381,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -373,9 +412,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = TZC6423TE8;
 				INFOPLIST_FILE = FFBackgroundParallax/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pandorga.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -385,9 +426,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = TZC6423TE8;
 				INFOPLIST_FILE = FFBackgroundParallax/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pandorga.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -396,6 +439,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TZC6423TE8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -406,6 +450,7 @@
 				);
 				INFOPLIST_FILE = FFBackgroundParallaxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pandorga.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FFBackgroundParallax.app/FFBackgroundParallax";
 			};
@@ -415,12 +460,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TZC6423TE8;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = FFBackgroundParallaxTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "co.pandorga.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FFBackgroundParallax.app/FFBackgroundParallax";
 			};

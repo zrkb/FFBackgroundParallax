@@ -21,10 +21,11 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	[self configureBackgroundParallax];
+	// [self configureHorizontalBackgroundParallax];
+	[self configureVerticalBackgroundParallax];
 }
 
-- (void)configureBackgroundParallax {
+- (void)configureHorizontalBackgroundParallax {
 	
 	// Instantiate the View
 	FFBackgroundParallax *backgroundParallax = [[FFBackgroundParallax alloc] initWithFrame:self.view.bounds];
@@ -37,13 +38,40 @@
 		
 		UIImageView *badge = [[UIImageView alloc] initWithFrame:CGRectMake(xOrigin, (CGRectGetHeight(backgroundParallax.frame) / 2) - (kImageSize / 2), kImageSize, kImageSize)];
 		
-		badge.image = [UIImage imageNamed:[NSString stringWithFormat:@"%i", (i + 1)]];
+		badge.image = [UIImage imageNamed:[NSString stringWithFormat:@"%lu", (i + 1)]];
 		
 		[backgroundParallax.contentScrollView addSubview:badge];
 	}
 	
 	// Update `setContentSize` property of your `contentScrollView`
 	[backgroundParallax.contentScrollView setContentSize:CGSizeMake(CGRectGetWidth(backgroundParallax.frame) * kTotalItems, CGRectGetHeight(backgroundParallax.frame))];
+	
+	[self.view addSubview:backgroundParallax];
+}
+
+- (void)configureVerticalBackgroundParallax {
+	
+	// Instantiate the View
+	FFBackgroundParallax *backgroundParallax = [[FFBackgroundParallax alloc] initWithFrame:self.view.bounds];
+	backgroundParallax.scrollingMode = FFParallaxModeVertical;
+	
+	// Here you can set your Image Background for Parallax Scrolling
+	[backgroundParallax setImageBackground:[UIImage imageNamed:@"newyork.jpg"]];
+	
+	CGFloat xOrigin = (CGRectGetWidth(backgroundParallax.frame) / 2) - (kImageSize / 2);
+	
+	for (NSUInteger i = 0; i < kTotalItems; i++) {
+		CGFloat yOrigin = (i * CGRectGetHeight(backgroundParallax.frame)) + (CGRectGetHeight(backgroundParallax.bounds) / 2) - (kImageSize / 2);
+		
+		UIImageView *badge = [[UIImageView alloc] initWithFrame:CGRectMake(xOrigin, yOrigin, kImageSize, kImageSize)];
+		
+		badge.image = [UIImage imageNamed:[NSString stringWithFormat:@"%lu", (i + 1)]];
+		
+		[backgroundParallax.contentScrollView addSubview:badge];
+	}
+	
+	// Update `setContentSize` property of your `contentScrollView`
+	[backgroundParallax.contentScrollView setContentSize:CGSizeMake(CGRectGetWidth(backgroundParallax.frame), CGRectGetHeight(backgroundParallax.frame) * kTotalItems)];
 	
 	[self.view addSubview:backgroundParallax];
 }

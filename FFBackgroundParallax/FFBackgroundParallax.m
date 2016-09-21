@@ -16,29 +16,25 @@
 
 @implementation FFBackgroundParallax
 
-- (instancetype)initWithCoder:(NSCoder *)coder
-{
+- (instancetype)initWithCoder:(NSCoder *)coder {
 	self = [super initWithCoder:coder];
 	if (self) {
-		
 		[self baseInit];
-		
 	}
 	return self;
 }
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
+- (instancetype)initWithFrame:(CGRect)frame {
 	self = [super initWithFrame:frame];
 	if (self) {
-		
 		[self baseInit];
-		
 	}
 	return self;
 }
 
 - (void)baseInit {
+	
+	_scrollingMode = FFParallaxModeHorizontal;
 	
 	self.imageScrollView = [[UIScrollView alloc] initWithFrame:self.bounds];
 	self.imageScrollView.bounces = NO;
@@ -59,8 +55,16 @@
 	
 	UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:image];
 	
-	CGFloat bgHeight = CGRectGetHeight(self.bounds);
-	CGFloat bgWidth = (image.size.width * bgHeight) / image.size.height;
+	CGFloat bgHeight;
+	CGFloat bgWidth;
+	
+	if (self.scrollingMode == FFParallaxModeHorizontal) {
+		bgHeight = CGRectGetHeight(self.bounds);
+		bgWidth = (image.size.width * bgHeight) / image.size.height;
+	} else {
+		bgWidth = CGRectGetWidth(self.bounds);
+		bgHeight = (image.size.height * bgWidth) / image.size.width;
+	}
 	
 	backgroundImageView.frame = CGRectMake(0, 0, bgWidth, bgHeight);
 	
@@ -70,27 +74,57 @@
 }
 
 
-- (CGFloat)maximumOffsetForScrollView:(UIScrollView *)scrollView
-{
-	CGFloat contentWidth = scrollView.contentSize.width;
-	CGFloat frameWidth = CGRectGetWidth(scrollView.frame);
+- (CGFloat)maximumOffsetForScrollView:(UIScrollView *)scrollView {
 	
-	return contentWidth - frameWidth;
+	if (self.scrollingMode == FFParallaxModeHorizontal) {
+		CGFloat contentWidth = scrollView.contentSize.width;
+		CGFloat frameWidth = CGRectGetWidth(scrollView.frame);
+		
+		return contentWidth - frameWidth;
+	} else {
+		CGFloat contentHeight = scrollView.contentSize.height;
+		CGFloat frameHeight = CGRectGetWidth(scrollView.frame);
+		
+		return contentHeight - frameHeight;
+	}
 }
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
 	
-	CGFloat currentOffset = self.contentScrollView.contentOffset.x;
+	CGFloat currentOffset;
 	
-	if (currentOffset >= 0 && currentOffset <= (self.contentScrollView.contentSize.width - CGRectGetWidth(self.bounds))) {
+	if (self.scrollingMode == FFParallaxModeHorizontal) {
+		currentOffset = self.contentScrollView.contentOffset.x;
+	} else {
+		currentOffset = self.contentScrollView.contentOffset.y;
+	}
+	
+	CGFloat viewPortion;
+	
+	if (self.scrollingMode == FFParallaxModeHorizontal) {
+		viewPortion = (self.contentScrollView.contentSize.width - CGRectGetWidth(self.bounds));
+	} else {
+		viewPortion = (self.contentScrollView.contentSize.height - CGRectGetHeight(self.bounds));
+	}
+	
+	
+	if (currentOffset >= 0 && currentOffset <= viewPortion) {
 		CGFloat maximumContentOffset = [self maximumOffsetForScrollView:self.contentScrollView];
 		
-		CGFloat percentageOffset = currentOffset/maximumContentOffset;
+		CGFloat percentageOffset = currentOffset / maximumContentOffset;
 		
 		CGFloat maximumImageOffset = [self maximumOffsetForScrollView:self.imageScrollView];
 		CGFloat actualImageOffset = maximumImageOffset * percentageOffset;
 		
-		[self.imageScrollView setContentOffset:CGPointMake(actualImageOffset, 0)];
+		CGPoint newPoint;
+		
+		if (self.scrollingMode == FFParallaxModeHorizontal) {
+			newPoint = CGPointMake(actualImageOffset, 0);
+		} else {
+			newPoint = CGPointMake(0, actualImageOffset);
+		}
+		
+		[self.imageScrollView setContentOffset:newPoint];
 	}
 }
 

@@ -15,14 +15,14 @@ Background Parallax Scrolling is a simple example for parallax scrolling based o
 > Instead of adding the source files directly to your project, you may want to consider using [CocoaPods](http://cocoapods.org/) to manage your dependencies. Follow the instructions on the CocoaPods site to install the gem, and specify `FFBackgroundParallax` as a dependency in your `Podfile` with:
 
 ```ruby
-pod 'FFBackgroundParallax', '~> 1.0.0'
+pod 'FFBackgroundParallax', '~> 1.1.0'
 ```
 But if you want to do it the old fashioned way, just add `FFBackgroundParallax.h/m` files to your project.
 
 ## Requirements
 
 * ARC
-* iOS 6.0 and above
+* iOS 8.0 and above
 
 ## Usage
 
@@ -79,15 +79,24 @@ To add your background image, simply call:
 - (void)setImageBackground:(UIImage *)image
 ```
 
+if you need vertical compatibility you need to change `scrollingMode` property to `FFParallaxModeVertical` when initialize the class:
+
+
+```objc
+FFBackgroundParallax *backgroundParallax = [[FFBackgroundParallax alloc] initWithFrame:self.view.bounds];
+backgroundParallax.scrollingMode = FFParallaxModeVertical;
+```
+
 ## Todo
 
-* Vertical Compatibility
+* ~~Vertical Compatibility~~
 * Swift Demo
 
 ## Credits
 
 * Minimal Design Badges - [https://dribbble.com/shots/1898692-Minimal-Design-Badges](https://dribbble.com/shots/1898692-Minimal-Design-Badges)
-* Snowy Mountain Peaks Photo by Lee Roylland - [https://unsplash.com/roylandnye](https://unsplash.com/roylandnye)
+* Snowy Mountain Peaks Photo by Lee Roylland - [https://unsplash.com/@roylandnye](https://unsplash.com/@roylandnye)
+* New York, United States by Todd Quackenbush - [iso](https://unsplash.com/@toddquackenbush)
 
 ## Collaboration
 
